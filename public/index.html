@@ -1,0 +1,70 @@
+<!DOCTYPE html>  
+<html lang="en">  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    input[type="text"],
+    input[type="submit"] {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    #messages {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      max-width: 80%;
+      margin: 0 auto;
+      background-color: #fff;
+      overflow-y: scroll;
+      max-height: 300px;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #e2e2e2;
+    }
+
+    .username {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  </style>
+<head>  
+  <meta charset="UTF-8">
+  <title>My Aplicaci�n con Sockets</title>
+  <script src="socket.io.js"></script>
+  <script src="main.js"></script>
+</head>  
+<body>  
+  <h1>CHAT CON NODE JS</h1>
+  <div id="messages"></div>
+  <br/>
+  <form onsubmit="return addMessage(this)">
+    <input type="text" id="username" placeholder="Tu Nombre" >
+    <input type="text" id="texto" placeholder="Mensaje...">
+    <input type="submit" value="Enviar!">
+  </form>
+</body>  
+</html>
